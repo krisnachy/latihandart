@@ -47,6 +47,10 @@ int doMathOperation(int number1, int number2, Function mathFunction) {
   return mathFunction(number1, number2);
 }
 
+int mathOperation(int number1, int number2, Function(int, int) operation) {
+  return operation(number1, number2);
+}
+
 void main(List<String> arguments) {
   // double p, l, luas;
 
@@ -71,4 +75,7 @@ void main(List<String> arguments) {
   }));
 
   print(doMathOperation(1, 2, (int a, int b) => a + b));
+  print(mathOperation(1, 2, (a, b) => a + b));
+  //Error
+  // print(mathOperation(1, 2, (a) => a + 2));
 }
