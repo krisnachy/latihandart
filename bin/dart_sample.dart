@@ -37,6 +37,15 @@ String pesan3(String from, String message,
       ((to != null) ? ' to ' + to : "") +
       ((via != null) ? ' via ' + via : "");
 }
+//End optional parameter
+
+//Lambda Expression untuk menyingkat return HANYA YANG MEMILIKI NILAI
+double luasPersegi(double sisi1, double sisi2) => sisi1 * sisi2;
+
+//Anonymous Function
+int doMathOperation(int number1, int number2, Function mathFunction) {
+  return mathFunction(number1, number2);
+}
 
 void main(List<String> arguments) {
   // double p, l, luas;
@@ -53,4 +62,13 @@ void main(List<String> arguments) {
   print(pesan("Johnny", "Sins", via: "PH"));
   print(pesan2('Me', 'Hi', 'You'));
   print(pesan3('Me', 'Hello'));
+
+  print(luasPersegi(4, 4));
+
+  //Anonymous Function
+  print(doMathOperation(1, 2, (int a, int b) {
+    return a + b;
+  }));
+
+  print(doMathOperation(1, 2, (int a, int b) => a + b));
 }
