@@ -10,6 +10,8 @@ void main(List<String> arguments) {
 
   while (i < 5) {
     print('Hai');
-    i++;
+    // i++;
+    //atau
+    i += 1;
   }
 }
