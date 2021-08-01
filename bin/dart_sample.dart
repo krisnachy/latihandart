@@ -6,12 +6,21 @@ void main(List<String> arguments) {
   // }
 
   //Penggunaan while
-  int i = 0;
+  // int i = 0;
 
-  while (i < 5) {
-    print('Hai');
-    // i++;
-    //atau
-    i += 1;
-  }
+  // while (i < 5) {
+  //   print('Hai');
+  //   // i++;
+  //   //atau
+  //   i += 1;
+  // }
+
+  int a, b, c, d;
+  a = 10;
+  b = a++;
+  print(a.toString() + " - " + b.toString());
+
+  c = 10;
+  d = ++c;
+  print(c.toString() + " - " + d.toString());
 }
