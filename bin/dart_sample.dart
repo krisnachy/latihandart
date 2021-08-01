@@ -29,6 +29,15 @@ String pesan2(String from, String message, [String to, String via]) {
       ((via != null) ? ' via ' + via : "");
 }
 
+String pesan3(String from, String message,
+    [String to = 'You', String via = 'WhatsApp']) {
+  return from +
+      ' say ' +
+      message +
+      ((to != null) ? ' to ' + to : "") +
+      ((via != null) ? ' via ' + via : "");
+}
+
 void main(List<String> arguments) {
   // double p, l, luas;
 
@@ -41,5 +50,7 @@ void main(List<String> arguments) {
   // nama();
 
   print(pesan("Johnny", "Sins", to: "You", via: "PH"));
+  print(pesan("Johnny", "Sins", via: "PH"));
   print(pesan2('Me', 'Hi', 'You'));
+  print(pesan3('Me', 'Hello'));
 }
