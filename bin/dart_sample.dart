@@ -2,35 +2,24 @@ import 'dart:ffi';
 import 'dart:io';
 
 void main(List<String> arguments) {
-  List<int> myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  List<int> mySecondArray = [1, 2, 3];
-  // mySecondArray[0] = 26;
+  PersegiPanjang kotak1, kotak2;
 
-  // int x = mySecondArray[0];
-  // print(x);
+  kotak1 = new PersegiPanjang();
+  kotak1.panjang = 2;
+  kotak1.lebar = 3;
 
-  // for (int index = 0; index < mySecondArray.length; index++) {
-  //   print(mySecondArray[index]);
-  // }
+  kotak2 = PersegiPanjang();
+  kotak2.panjang = double.tryParse(stdin.readLineSync());
+  kotak2.lebar = double.tryParse(stdin.readLineSync());
+  print(kotak2.luasPersegiPanjang());
 
-  // for (int bilangan in mySecondArray) {
-  //   print(bilangan);
-  // }
+  // print(kotak1.panjang);
+}
 
-  // mySecondArray.forEach((element) {
-  //   print(element);
-  // });
+class PersegiPanjang {
+  double panjang, lebar;
 
-  myArray.add(10);
-  myArray.addAll(mySecondArray);
-  myArray.insert(1, 20);
-  myArray.insertAll(3, [30, 40]);
-  // myArray.removeLast();
-  // myArray.removeAt(2);
-  // myArray.removeRange(3, 4);
-  myArray.removeWhere((element) => element % 2 != 0);
-
-  myArray.forEach((element) {
-    print(element);
-  });
+  double luasPersegiPanjang() {
+    return this.panjang * this.lebar;
+  }
 }
