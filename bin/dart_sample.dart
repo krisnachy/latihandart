@@ -1,81 +1,36 @@
 import 'dart:ffi';
 import 'dart:io';
 
-double luasSegiEmpat(double panjang, double lebar) {
-  double hasil;
-  hasil = panjang * lebar;
-  return hasil;
-}
-
-//Jika tidak mengembalikan sesuatu maka menggunakan void
-void nama() {
-  print("Krisna");
-}
-
-//Penggunaan optional parameter yang mana parameter boleh diisi atau tidak
-String pesan(String from, String message, {String to, String via}) {
-  return from +
-      ' say ' +
-      message +
-      ((to != null) ? ' to ' + to : "") +
-      ((via != null) ? ' via ' + via : "");
-}
-
-String pesan2(String from, String message, [String to, String via]) {
-  return from +
-      ' say ' +
-      message +
-      ((to != null) ? ' to ' + to : "") +
-      ((via != null) ? ' via ' + via : "");
-}
-
-String pesan3(String from, String message,
-    [String to = 'You', String via = 'WhatsApp']) {
-  return from +
-      ' say ' +
-      message +
-      ((to != null) ? ' to ' + to : "") +
-      ((via != null) ? ' via ' + via : "");
-}
-//End optional parameter
-
-//Lambda Expression untuk menyingkat return HANYA YANG MEMILIKI NILAI
-double luasPersegi(double sisi1, double sisi2) => sisi1 * sisi2;
-
-//Anonymous Function
-int doMathOperation(int number1, int number2, Function mathFunction) {
-  return mathFunction(number1, number2);
-}
-
-int mathOperation(int number1, int number2, Function(int, int) operation) {
-  return operation(number1, number2);
-}
-
 void main(List<String> arguments) {
-  // double p, l, luas;
+  List<int> myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  List<int> mySecondArray = [1, 2, 3];
+  // mySecondArray[0] = 26;
 
-  // p = double.tryParse(stdin.readLineSync());
-  // l = double.tryParse(stdin.readLineSync());
+  // int x = mySecondArray[0];
+  // print(x);
 
-  // luas = luasSegiEmpat(p, l);
-  // print(luas);
+  // for (int index = 0; index < mySecondArray.length; index++) {
+  //   print(mySecondArray[index]);
+  // }
 
-  // nama();
+  // for (int bilangan in mySecondArray) {
+  //   print(bilangan);
+  // }
 
-  print(pesan("Johnny", "Sins", to: "You", via: "PH"));
-  print(pesan("Johnny", "Sins", via: "PH"));
-  print(pesan2('Me', 'Hi', 'You'));
-  print(pesan3('Me', 'Hello'));
+  // mySecondArray.forEach((element) {
+  //   print(element);
+  // });
 
-  print(luasPersegi(4, 4));
+  myArray.add(10);
+  myArray.addAll(mySecondArray);
+  myArray.insert(1, 20);
+  myArray.insertAll(3, [30, 40]);
+  // myArray.removeLast();
+  // myArray.removeAt(2);
+  // myArray.removeRange(3, 4);
+  myArray.removeWhere((element) => element % 2 != 0);
 
-  //Anonymous Function
-  print(doMathOperation(1, 2, (int a, int b) {
-    return a + b;
-  }));
-
-  print(doMathOperation(1, 2, (int a, int b) => a + b));
-  print(mathOperation(1, 2, (a, b) => a + b));
-  //Error
-  // print(mathOperation(1, 2, (a) => a + 2));
+  myArray.forEach((element) {
+    print(element);
+  });
 }
