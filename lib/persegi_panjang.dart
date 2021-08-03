@@ -1,5 +1,5 @@
 class PersegiPanjang {
-  double _panjang, lebar;
+  double _panjang, _lebar;
 
   //Menggunakan setter getter
   void setPanjang(double value) {
@@ -14,7 +14,16 @@ class PersegiPanjang {
     return _panjang;
   }
 
+  //setter getter lebih simple
+  void set lebar(double value) {
+    _lebar = value;
+  }
+
+  double get lebar {
+    return _lebar;
+  }
+
   double luasPersegiPanjang() {
-    return this._panjang * this.lebar;
+    return this._panjang * this._lebar;
   }
 }
