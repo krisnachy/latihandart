@@ -26,4 +26,6 @@ class PersegiPanjang {
   double luasPersegiPanjang() {
     return this._panjang * this._lebar;
   }
+
+  double get luas => _panjang * _lebar;
 }

@@ -15,5 +15,7 @@ void main(List<String> arguments) {
   print(kotak2.luasPersegiPanjang());
   print(kotak2.getPanjang());
 
+  print(kotak1.luas);
+
   // print(kotak1.panjang);
 }
