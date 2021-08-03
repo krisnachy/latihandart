@@ -13,6 +13,7 @@ void main(List<String> arguments) {
   kotak2.setPanjang(double.tryParse(stdin.readLineSync()));
   kotak2.lebar = double.tryParse(stdin.readLineSync());
   print(kotak2.luasPersegiPanjang());
+  print(kotak2.getPanjang());
 
   // print(kotak1.panjang);
 }

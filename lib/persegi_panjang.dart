@@ -10,6 +10,10 @@ class PersegiPanjang {
     _panjang = value;
   }
 
+  double getPanjang() {
+    return _panjang;
+  }
+
   double luasPersegiPanjang() {
     return this._panjang * this.lebar;
   }
