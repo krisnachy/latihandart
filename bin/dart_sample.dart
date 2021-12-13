@@ -3,10 +3,12 @@ import 'person.dart';
 import 'student.dart';
 
 void main(List<String> arguments) {
-  Person p = Person('Joko');
-  Person q = Person();
+  Person s = Student();
+  // Person p = Person('Joko');
+  // Person q = Person();
   // p.name = 'Joko';
 
-  print(p.name);
-  print(q.name);
+  // print(p.name);
+  // print(q.name);
+  print(s.name);
 }

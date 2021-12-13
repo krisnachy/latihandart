@@ -8,7 +8,12 @@ class Person {
   // }
 
   // Jika tidak memberikan [] maka pada main wajib memasukkan parameter
-  Person([String name = 'no name']) {
+  // Person([String name = 'no name']) {
+  //   print('constructor person');
+  //   this.name = name;
+  // }
+
+  Person({String name = 'no name'}) {
     print('constructor person');
     this.name = name;
   }
