@@ -14,6 +14,7 @@ void main(List<String> arguments) async {
   print('job 1');
   print('job 2');
   //karena kemablian void(kosong) maka kembalian pada value tidak ada
+  // ignore: unawaited_futures
   p.getDataAsync().then((_) {
     print('job 3 : ' + p.name);
   });
