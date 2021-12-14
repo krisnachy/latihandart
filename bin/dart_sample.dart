@@ -1,5 +1,6 @@
 import 'package:dart_sample/datetime_secure_box.dart';
 import 'package:dart_sample/int_secure_box.dart';
+import 'package:dart_sample/secure_box.dart';
 
 void main(List<String> arguments) {
   var box = IntSecureBox(100, '123');
@@ -10,4 +11,17 @@ void main(List<String> arguments) {
 
   var dateBox = DateTimeSecureBox(DateTime.now(), '456');
   print(dateBox.getData('456'));
+
+  //Menggunakan generic class
+  var sbox = SecureBox<String>('ini data secure', '234');
+  print(sbox.getData('234').toString());
+
+  var pbox = SecureBox<Person>(Person('David'), '123');
+  print(pbox.getData('123').name);
+}
+
+class Person {
+  final String name;
+
+  Person(this.name);
 }
