@@ -5,8 +5,8 @@ void main(List<String> arguments) {
   // String b = "World";
 
   // print(a+b);
-  Hero a = Hero(10);
-  Hero b = Hero(20);
+  var a = Hero(10);
+  var b = Hero(20);
 
   print((a+b).power);
 }
