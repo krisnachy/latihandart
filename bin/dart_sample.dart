@@ -41,9 +41,11 @@ class Person {
 
   int get roleWeight {
     switch(role) {
-      case 'Merchant': return 1;
+      case 'Merchant': 
+      return 1;
       break;
-      case 'User': return 2;
+      case 'User': 
+      return 2;
       break;
       default: return 3;
     }
